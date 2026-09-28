@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+streamlit
+pymupdf
+python-docx
+sentence-transformers
+pandas
+openpyxl
+sqlalchemy
+pymysql
+python-multipart
+pytest
+requests

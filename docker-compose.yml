@@ -1,0 +1,31 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: resume_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ashish
+      MYSQL_DATABASE: resume_screening
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    build: .
+    container_name: resume_backend
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: as
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: resume_screening
+    ports:
+      - "8000:8000"
+
+volumes:
+  mysql_data:

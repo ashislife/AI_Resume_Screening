@@ -1,0 +1,33 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Uploaded Files
+uploads/*
+!uploads/.gitkeep
+
+# Environment Variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS Files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+docker-error.txt
+
+# Python Packaging
+*.egg-info/
+dist/
+build/
+backend/uploads/
